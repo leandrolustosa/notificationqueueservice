@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA9C8EC7-1428-419D-B328-D2929216F1BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AInBox.Astove.Core</RootNamespace>
+    <AssemblyName>AInBox.Astove.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.1.1.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.1.1\lib\net45\MongoDB.Bson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.1.1.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.1.1\lib\net45\MongoDB.Driver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.1.1.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.1.1\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.8\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.8\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.2.0\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebApiDoodle.Net.Http.Client.Model, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebApiDoodle.Net.Http.Client.Model.2.0.1\lib\net40\WebApiDoodle.Net.Http.Client.Model.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.3.2.3\lib\net45\WebMatrix.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.3.2.3\lib\net45\WebMatrix.WebData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AstoveValidateAntiForgeryTokenAttribute.cs" />
+    <Compile Include="Attributes\ColumnDefinitionAttribute.cs" />
+    <Compile Include="Attributes\DecimalPrecisionAttribute.cs" />
+    <Compile Include="Attributes\MaskAttribute.cs" />
+    <Compile Include="Attributes\CssClassAttribute.cs" />
+    <Compile Include="Attributes\DataEntityAttribute.cs" />
+    <Compile Include="Attributes\EmptyParameterFilterAttribute.cs" />
+    <Compile Include="Attributes\FilterWebapiAttribute.cs" />
+    <Compile Include="Attributes\ValidationModelAttribute.cs" />
+    <Compile Include="Attributes\RequestModelAttribute.cs" />
+    <Compile Include="Attributes\AstoveMvcAuthorizeAttribute.cs" />
+    <Compile Include="Attributes\AstoveWebApiAuthorizeAttribute.cs" />
+    <Compile Include="Attributes\StopwatchAttribute.cs" />
+    <Compile Include="Attributes\StringFormatMethodAttribute.cs" />
+    <Compile Include="Attributes\ValidateModelAttribute.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\IAstoveApiController.cs" />
+    <Compile Include="Controllers\WebApiController.cs" />
+    <Compile Include="Controllers\WebApiLogController.cs" />
+    <Compile Include="Controllers\WebApiCustomController.cs" />
+    <Compile Include="Controllers\WebApiViewController.cs" />
+    <Compile Include="Data\DynamicLibrary.cs" />
+    <Compile Include="Data\FakeDbSet.cs" />
+    <Compile Include="Data\IEntityRepository.cs" />
+    <Compile Include="Data\IEntityService.cs" />
+    <Compile Include="Data\PaginatedMongoList.cs" />
+    <Compile Include="Enums\GetTypes.cs" />
+    <Compile Include="Exceptions\AstoveExceptions.cs" />
+    <Compile Include="Extensions\BaseEntityExtensions.cs" />
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Extensions\IFindFluentExtension.cs" />
+    <Compile Include="Helpers\HtmlHelperExtension.cs" />
+    <Compile Include="Logging\ILog.cs" />
+    <Compile Include="Logging\Library.cs" />
+    <Compile Include="Logging\Log4NetModule.cs" />
+    <Compile Include="Data\BaseEntity.cs" />
+    <Compile Include="Exceptions\ResourceExceptions.cs" />
+    <Compile Include="Extensions\ICollectionExtensions.cs" />
+    <Compile Include="Data\IEntity.cs" />
+    <Compile Include="Data\PaginatedList.cs" />
+    <Compile Include="Enums\Utility.cs" />
+    <Compile Include="Extensions\FiltersExtension.cs" />
+    <Compile Include="Extensions\IQueryableExtensions.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
+    <Compile Include="Filter\AgeFilter.cs" />
+    <Compile Include="Filter\AssyncAutoCompleteFilter.cs" />
+    <Compile Include="Filter\BirthdayFilter.cs" />
+    <Compile Include="Filter\BooleanFilter.cs" />
+    <Compile Include="Filter\DateFilter.cs" />
+    <Compile Include="Filter\DecimalCompareFilter.cs" />
+    <Compile Include="Filter\DecimalFilter.cs" />
+    <Compile Include="Filter\EnumFilter.cs" />
+    <Compile Include="Filter\ExistsFilter.cs" />
+    <Compile Include="Filter\ConditionTypeBuilder.cs" />
+    <Compile Include="Filter\FilterBase.cs" />
+    <Compile Include="Filter\FilterFactory.cs" />
+    <Compile Include="Filter\FKCheckBoxFilter.cs" />
+    <Compile Include="Filter\FKDropdownListFilter.cs" />
+    <Compile Include="Filter\IFilter.cs" />
+    <Compile Include="Filter\IRequestFilter.cs" />
+    <Compile Include="Filter\LikeFilter.cs" />
+    <Compile Include="List\ColumnFactory.cs" />
+    <Compile Include="Logging\NLogLogger.cs" />
+    <Compile Include="Logging\NLogModule.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\AccountBindingModels.cs" />
+    <Compile Include="Model\AccountViewModels.cs" />
+    <Compile Include="Model\AreaCoords.cs" />
+    <Compile Include="Model\Arquivo.cs" />
+    <Compile Include="Model\BaseJson.cs" />
+    <Compile Include="Model\BaseResultModel.cs" />
+    <Compile Include="Model\BaseBindingModel.cs" />
+    <Compile Include="Model\BaseModel.cs" />
+    <Compile Include="Model\CodeModel.cs" />
+    <Compile Include="Model\HttpResponseResult.cs" />
+    <Compile Include="Model\IPaginatedMongoModel.cs" />
+    <Compile Include="Model\IViewModel.cs" />
+    <Compile Include="Model\IdentityModels.cs" />
+    <Compile Include="Model\Image.cs" />
+    <Compile Include="Model\FileModel.cs" />
+    <Compile Include="Model\IModel.cs" />
+    <Compile Include="Model\IPaginatedModel.cs" />
+    <Compile Include="Model\IRequestCommand.cs" />
+    <Compile Include="Model\IResultModel.cs" />
+    <Compile Include="Model\IBindingModel.cs" />
+    <Compile Include="Model\JsonError.cs" />
+    <Compile Include="Model\PaginatedMongoModel.cs" />
+    <Compile Include="Model\PaginatedModel.cs" />
+    <Compile Include="Model\PaginatedRequestCommand.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Options\ColumnDefinition.cs" />
+    <Compile Include="Options\Condition.cs" />
+    <Compile Include="Options\DropDownStringOptions.cs" />
+    <Compile Include="Options\DropDownOptions.cs" />
+    <Compile Include="Options\Filter.cs" />
+    <Compile Include="Options\KeyValueString.cs" />
+    <Compile Include="Options\PagingOptions.cs" />
+    <Compile Include="Options\EnumDomainValues.cs" />
+    <Compile Include="Options\EnumOperators.cs" />
+    <Compile Include="Options\FilterCondition.cs" />
+    <Compile Include="Options\FilterOptions.cs" />
+    <Compile Include="Options\KeyValue.cs" />
+    <Compile Include="Options\PropertyValue.cs" />
+    <Compile Include="Options\SortOptions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Resources\Exceptions.cs" />
+    <Compile Include="Resources\ResourceManager.cs" />
+    <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Security\BaseEntitySecurity.cs" />
+    <Compile Include="Security\BasicAuthenticationMessageHandler.cs" />
+    <Compile Include="Security\BasicAuthHttpModule.cs" />
+    <Compile Include="Security\HTTPSGuard.cs" />
+    <Compile Include="Security\IdentityConfig.cs" />
+    <Compile Include="Security\RijndaelManagedClass.cs" />
+    <Compile Include="Security\RSAClass.cs" />
+    <Compile Include="Security\SimpleMembershipInitializer.cs" />
+    <Compile Include="Security\Startup.cs" />
+    <Compile Include="Security\TokenValidation.cs" />
+    <Compile Include="Security\WebServiceUserValidator.cs" />
+    <Compile Include="UnitTest\HttpClientTestWebApi.cs" />
+    <Compile Include="UnitTest\IAstoveUnitTest.cs" />
+    <Compile Include="UnitTest\TestDbAsyncQueryProvider.cs" />
+    <Compile Include="Util\EmailManager.cs" />
+    <Compile Include="Util\ExcelManager.cs" />
+    <Compile Include="Util\ResourceManager.cs" />
+    <Compile Include="Util\Thumbnail.cs" />
+    <Compile Include="Util\Url.cs" />
+    <Compile Include="Validations\CustomValidator.cs" />
+    <Compile Include="Validations\EnumValidationAttribute.cs" />
+    <Compile Include="Validations\MaximumAttribute.cs" />
+    <Compile Include="Validations\MinimumAttribute.cs" />
+    <Compile Include="Util\FileManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

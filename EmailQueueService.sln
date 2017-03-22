@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AInBox.Messaging", "AInBox.Messaging\AInBox.Messaging.csproj", "{456F5067-4AFF-4539-840B-47E3B0870870}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailQueueService", "EmailQueueService\EmailQueueService.csproj", "{9E0B511C-EAF9-4591-BC47-A070B68C6D3A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EmailQueueServiceSetup", "EmailQueueService\EmailQueueServiceSetup\EmailQueueServiceSetup.vdproj", "{E2D171A2-CACA-4F4E-8BED-AF52BA9913D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AInBox.Queue.WebService", "AInBox.Queue.WebService\AInBox.Queue.WebService.csproj", "{3F692411-B0A9-4B9A-8792-09145F0519A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AInBox.Astove.Core", "AInBox.Astove.Core\AInBox.Astove.Core.csproj", "{EA9C8EC7-1428-419D-B328-D2929216F1BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AInBox.Queue.WebService.Console", "AInBox.Queue.WebService.Console\AInBox.Queue.WebService.Console.csproj", "{401BAD6D-4D91-4A72-9EA2-2F71F00CE174}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{456F5067-4AFF-4539-840B-47E3B0870870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{456F5067-4AFF-4539-840B-47E3B0870870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{456F5067-4AFF-4539-840B-47E3B0870870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{456F5067-4AFF-4539-840B-47E3B0870870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E0B511C-EAF9-4591-BC47-A070B68C6D3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0B511C-EAF9-4591-BC47-A070B68C6D3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E0B511C-EAF9-4591-BC47-A070B68C6D3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E0B511C-EAF9-4591-BC47-A070B68C6D3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2D171A2-CACA-4F4E-8BED-AF52BA9913D3}.Debug|Any CPU.ActiveCfg = Debug
+		{E2D171A2-CACA-4F4E-8BED-AF52BA9913D3}.Debug|Any CPU.Build.0 = Debug
+		{E2D171A2-CACA-4F4E-8BED-AF52BA9913D3}.Release|Any CPU.ActiveCfg = Release
+		{E2D171A2-CACA-4F4E-8BED-AF52BA9913D3}.Release|Any CPU.Build.0 = Release
+		{3F692411-B0A9-4B9A-8792-09145F0519A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F692411-B0A9-4B9A-8792-09145F0519A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F692411-B0A9-4B9A-8792-09145F0519A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F692411-B0A9-4B9A-8792-09145F0519A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA9C8EC7-1428-419D-B328-D2929216F1BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA9C8EC7-1428-419D-B328-D2929216F1BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA9C8EC7-1428-419D-B328-D2929216F1BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA9C8EC7-1428-419D-B328-D2929216F1BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{401BAD6D-4D91-4A72-9EA2-2F71F00CE174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401BAD6D-4D91-4A72-9EA2-2F71F00CE174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401BAD6D-4D91-4A72-9EA2-2F71F00CE174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401BAD6D-4D91-4A72-9EA2-2F71F00CE174}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

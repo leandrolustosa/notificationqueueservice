@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://notifications.ainbox.com.br/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://notifications.ainbox.com.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://notifications.ainbox.com.br/">
+      <s:element name="SendEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:SendEmailBinding" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SendEmailBinding">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ModuleId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReferenceId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceParameters" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ScheduleDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Priority" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="To" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bcc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodyText" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubjectEncoding" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodyEncoding" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsBodyHtml" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmailResult" type="tns:SendEmailResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SendEmailResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseResultModel" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseResultModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IsValid" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddEnterpriseToDatabase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:AddEnterpriseToDatabaseBinding" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AddEnterpriseToDatabaseBinding">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FromName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FromEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Host" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Port" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServerUsername" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServerPassword" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddEnterpriseToDatabaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddEnterpriseToDatabaseResult" type="tns:AddEnterpriseToDatabaseResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AddEnterpriseToDatabaseResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseResultModel" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="AddModuleToDatabase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:AddModuleToDatabaseBinding" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AddModuleToDatabaseBinding">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EnterpriseId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FromName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FromEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RestrictIps" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddModuleToDatabaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddModuleToDatabaseResult" type="tns:AddModuleToDatabaseResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AddModuleToDatabaseResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseResultModel" />
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddEnterpriseToDatabaseSoapIn">
+    <wsdl:part name="parameters" element="tns:AddEnterpriseToDatabase" />
+  </wsdl:message>
+  <wsdl:message name="AddEnterpriseToDatabaseSoapOut">
+    <wsdl:part name="parameters" element="tns:AddEnterpriseToDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddModuleToDatabaseSoapIn">
+    <wsdl:part name="parameters" element="tns:AddModuleToDatabase" />
+  </wsdl:message>
+  <wsdl:message name="AddModuleToDatabaseSoapOut">
+    <wsdl:part name="parameters" element="tns:AddModuleToDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailSoapIn" />
+      <wsdl:output message="tns:SendEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEnterpriseToDatabase">
+      <wsdl:input message="tns:AddEnterpriseToDatabaseSoapIn" />
+      <wsdl:output message="tns:AddEnterpriseToDatabaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddModuleToDatabase">
+      <wsdl:input message="tns:AddModuleToDatabaseSoapIn" />
+      <wsdl:output message="tns:AddModuleToDatabaseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpGet" />
+  <wsdl:portType name="ServiceHttpPost" />
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendEmail">
+      <soap:operation soapAction="http://notifications.ainbox.com.br/SendEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEnterpriseToDatabase">
+      <soap:operation soapAction="http://notifications.ainbox.com.br/AddEnterpriseToDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddModuleToDatabase">
+      <soap:operation soapAction="http://notifications.ainbox.com.br/AddModuleToDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendEmail">
+      <soap12:operation soapAction="http://notifications.ainbox.com.br/SendEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEnterpriseToDatabase">
+      <soap12:operation soapAction="http://notifications.ainbox.com.br/AddEnterpriseToDatabase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddModuleToDatabase">
+      <soap12:operation soapAction="http://notifications.ainbox.com.br/AddModuleToDatabase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpGet" type="tns:ServiceHttpGet">
+    <http:binding verb="GET" />
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpPost" type="tns:ServiceHttpPost">
+    <http:binding verb="POST" />
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://localhost:60044/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://localhost:60044/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpGet" binding="tns:ServiceHttpGet">
+      <http:address location="http://localhost:60044/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpPost" binding="tns:ServiceHttpPost">
+      <http:address location="http://localhost:60044/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
